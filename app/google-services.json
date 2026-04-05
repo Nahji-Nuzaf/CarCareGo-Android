@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "569170646033",
+    "project_id": "carcarego-97e6d",
+    "storage_bucket": "carcarego-97e6d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569170646033:android:58ea184c2c60dd9adecdb0",
+        "android_client_info": {
+          "package_name": "com.example.carcarego"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC03lhM4lEDZDhyt0tpClQcubrjN9LieJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569170646033:android:1b8df0c4cb2dec10decdb0",
+        "android_client_info": {
+          "package_name": "com.example.carcarego.activity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC03lhM4lEDZDhyt0tpClQcubrjN9LieJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

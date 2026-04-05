@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvVehicle"
+    android:layout_width="140dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    app:cardBackgroundColor="#1E293B"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/ivVehicleIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/directions_car_24px"
+            app:tint="#94A3B8" />
+
+        <TextView
+            android:id="@+id/tvVehicleModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Toyota Aqua"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvVehiclePlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CAS-1234"
+            android:textColor="#64748B"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/circle_button_bg"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="PRODUCT DETAILS"
+            android:textColor="#D8DEE7"
+            android:textSize="16sp"
+            android:letterSpacing="0.1"/>
+
+        <ImageButton
+            android:id="@+id/btnCart"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/circle_button_bg"
+            android:src="@drawable/shopping_cart_24px"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:layout_above="@+id/layoutBottomButtons"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:cardBackgroundColor="#131C24"
+                    app:cardCornerRadius="28dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#1A252F">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/product_image_slider"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                            android:id="@+id/dotsIndicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="16dp"
+                            app:dotsColor="#80FFFFFF"
+                            app:dotsSize="8dp"
+                            app:dotsSpacing="4dp"
+                            app:progressMode="true" />
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnAddToWishlist"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="#CC0B1218"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="#1A252F"
+                    app:strokeWidth="1dp">
+
+                    <ImageView
+                        android:id="@+id/ivWishlistHeart"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/heartoutlined"
+                        app:tint="@color/color_red" />
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/product_details_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:lineSpacingExtra="2dp"
+                android:text="ULTRA GLOSS CERAMIC WAX"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <RatingBar
+                    android:id="@+id/product_details_rating"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    android:rating="4.5"
+                    android:progressTint="#FFD700" />
+
+                <TextView
+                    android:id="@+id/tvRatingCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="(20 Reviews)"
+                    android:textColor="#808B96"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:gravity="bottom">
+
+                <TextView
+                    android:id="@+id/product_details_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LKR 2,500"
+                    android:textColor="#1E88E5"
+                    android:textSize="28sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/product_details_attribute_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp"/>
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="SIZE"-->
+<!--                    android:textColor="#808B96"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:letterSpacing="0.15" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginTop="10dp">-->
+
+<!--                    <com.google.android.material.card.MaterialCardView-->
+<!--                        android:id="@+id/sizeS"-->
+<!--                        android:layout_width="45dp"-->
+<!--                        android:layout_height="45dp"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        app:cardBackgroundColor="#131C24"-->
+<!--                        app:cardCornerRadius="12dp"-->
+<!--                        app:cardElevation="0dp"-->
+<!--                        app:strokeWidth="1dp"-->
+<!--                        app:strokeColor="#1E88E5"> <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="S"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textStyle="bold" />-->
+<!--                    </com.google.android.material.card.MaterialCardView>-->
+
+<!--                    <com.google.android.material.card.MaterialCardView-->
+<!--                        android:id="@+id/sizeM"-->
+<!--                        android:layout_width="45dp"-->
+<!--                        android:layout_height="45dp"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        app:cardBackgroundColor="#131C24"-->
+<!--                        app:cardCornerRadius="12dp"-->
+<!--                        app:cardElevation="0dp"-->
+<!--                        app:strokeWidth="1dp"-->
+<!--                        app:strokeColor="#1A252F">-->
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="M"-->
+<!--                            android:textColor="#808B96" />-->
+<!--                    </com.google.android.material.card.MaterialCardView>-->
+
+<!--                    <com.google.android.material.card.MaterialCardView-->
+<!--                        android:id="@+id/sizeL"-->
+<!--                        android:layout_width="45dp"-->
+<!--                        android:layout_height="45dp"-->
+<!--                        app:cardBackgroundColor="#131C24"-->
+<!--                        app:cardCornerRadius="12dp"-->
+<!--                        app:cardElevation="0dp"-->
+<!--                        app:strokeWidth="1dp"-->
+<!--                        app:strokeColor="#1A252F">-->
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="L"-->
+<!--                            android:textColor="#808B96" />-->
+<!--                    </com.google.android.material.card.MaterialCardView>-->
+<!--                </LinearLayout>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:text="COLOR"-->
+<!--                    android:textColor="#808B96"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:letterSpacing="0.15" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginTop="10dp">-->
+
+<!--                    <com.google.android.material.card.MaterialCardView-->
+<!--                        android:id="@+id/color1"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_marginEnd="12dp"-->
+<!--                        app:cardBackgroundColor="#2ECC71"-->
+<!--                        app:cardCornerRadius="10dp"-->
+<!--                        app:cardElevation="0dp"-->
+<!--                        app:strokeWidth="2dp"-->
+<!--                        app:strokeColor="#1E88E5" />-->
+
+<!--                    <com.google.android.material.card.MaterialCardView-->
+<!--                        android:id="@+id/color2"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_marginEnd="12dp"-->
+<!--                        app:cardBackgroundColor="#E74C3C"-->
+<!--                        app:cardCornerRadius="10dp"-->
+<!--                        app:cardElevation="0dp" />-->
+
+<!--                    <com.google.android.material.card.MaterialCardView-->
+<!--                        android:id="@+id/color3"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        app:cardBackgroundColor="#F1C40F"-->
+<!--                        app:cardCornerRadius="10dp"-->
+<!--                        app:cardElevation="0dp" />-->
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QUANTITY"
+                    android:textColor="#808B96"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.15" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#131C24"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#1A252F">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="4dp">
+
+                        <ImageButton
+                            android:id="@+id/product_details_btnMinus"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/outline_check_indeterminate_small_24"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/product_details_quantity"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/product_details_btnPlus"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/baseline_add_24"
+                            app:tint="@color/white" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/product_details_avb_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:text="15 items available"
+                android:textColor="#A2A6A6"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="PRODUCT DESCRIPTION"
+                android:textColor="#808B96"
+                android:textSize="14sp"
+                android:letterSpacing="0.15" />
+
+            <TextView
+                android:id="@+id/tvDetailProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="High-performance ceramic infused wax providing 9H hardness and ultra-hydrophobic water beading properties. Safe for all paint types and delivers a mirror-like finish."
+                android:textColor="#D5DBDB"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp" />
+
+            <include layout="@layout/item_section"
+            android:id="@+id/product_details_top_trending_product_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutBottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#011221"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp"
+        android:elevation="8dp"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddToCart"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="ADD TO CART"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:cornerRadius="16dp"
+            app:backgroundTint="#1A222E"
+            app:icon="@drawable/shopping_cart_24px"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconSize="16dp"
+            app:strokeColor="#2C3E50"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBuyNow"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1.2"
+            android:layout_marginStart="8dp"
+            android:text="BUY NOW"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:cornerRadius="16dp"
+            app:backgroundTint="#1E88E5"
+            app:iconGravity="textStart"
+            app:iconPadding="10dp"
+            app:iconSize="20dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

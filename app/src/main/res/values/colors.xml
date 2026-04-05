@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_navy_dark">#0F172A</color>
+    <color name="brand_navy_surface">#1E293B</color>
+    <color name="brand_sapphire_blue">#3B82F6</color>
+<!--    <color name="brand_sapphire_blue">#0066FF</color>-->
+    <color name="brand_sapphire_variant">#2563EB</color>
+
+    <color name="text_ghost_white">#F8FAFC</color>
+    <color name="text_slate_gray">#94A3B8</color>
+    <color name="success_emerald">#10B981</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="blue_accent">#3B82F6</color>
+    <color name="dark_blue_variant">#1E293B</color>
+    <color name="card_bg_color">#0F172A</color>
+</resources>

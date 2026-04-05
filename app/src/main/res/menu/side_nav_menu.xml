@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/side_nav_group_main">
+        <item android:id="@+id/side_nav_wishlist" android:icon="@drawable/favorite_24px" android:title="@string/side_nav_wishlist_title" android:visible="false"/>
+        <item android:id="@+id/side_nav_cart" android:icon="@drawable/shopping_cart_24px" android:title="@string/side_nav_cart_title" android:visible="false"/>
+        <item android:id="@+id/side_nav_orders" android:icon="@drawable/orders_24px" android:title="@string/side_nav_my_orders_title" android:visible="false"/>
+        <item android:id="@+id/side_nav_chat" android:icon="@drawable/chat_bubble_24px" android:title="@string/side_nav_message_title" android:visible="false"/>
+        <item android:id="@+id/side_nav_settings" android:icon="@drawable/settings_24px" android:title="@string/side_nav_settings_title"/>
+    </group>
+
+    <group android:id="@+id/side_nav_group_auth">
+        <item android:id="@+id/side_nav_login" android:icon="@drawable/login_24px" android:title="@string/side_nav_login_title"/>
+        <item android:id="@+id/side_nav_logout" android:icon="@drawable/logout_24px" android:title="@string/side_nav_logout_title" android:visible="false"/>
+    </group>
+
+
+</menu>
